@@ -1,0 +1,104 @@
+{
+    "2023mustang.jpg": {
+        "make": "Ford",
+        "model": "Mustang",
+        "color": "Red",
+        "description": "Ford Mustang 2023 in red color"
+    },
+    "2023mustang_interior.jpg": {
+        "make": "Ford",
+        "model": "Mustang",
+        "color": "Black Interior",
+        "description": "Ford Mustang 2023 interior with black color"
+    },
+    "f150_2023_image.jpg": {
+        "make": "Ford",
+        "model": "F150",
+        "color": "White",
+        "description": "Ford F150 2023 model in white color"
+    },
+    "f150_2023_interior.jpg": {
+        "make": "Ford",
+        "model": "F150",
+        "color": "Black Interior",
+        "description": "Ford F150 2023 with black interior"
+    },
+    "f150_2024_image.jpg": {
+        "make": "Ford",
+        "model": "F150",
+        "color": "Dark Blue",
+        "description": "Ford F150 2024 model in dark blue color"
+    },
+    "f150_2024_interior.jpg": {
+        "make": "Ford",
+        "model": "F150",
+        "color": "Black Interior",
+        "description": "Ford F150 2024 with black interior"
+    },
+    "grey_mustang.jpg": {
+        "make": "Ford",
+        "model": "Mustang",
+        "color": "Grey",
+        "description": "Ford Mustang 2024 model in grey color"
+    },
+    "mustang2024_interior (1).jpg": {
+        "make": "Ford",
+        "model": "Mustang",
+        "color": "Black Interior",
+        "description": "Ford Mustang 2024 with black interior"
+    },
+    "2024-ford-bronco-chinese-spec.jpg": {
+        "make": "Ford",
+        "model": "Bronco",
+        "color": "White",
+        "description": "Ford Bronco 2024 model in white color"
+    },
+    "bronco-interior.jpg": {
+        "make": "Ford",
+        "model": "Bronco",
+        "color": "Black Interior",
+        "description": "Ford Bronco 2024 with black interior"
+    },
+    "bronco-side.jpg": {
+        "make": "Ford",
+        "model": "Bronco",
+        "color": "Dark Green",
+        "description": "Ford Bronco 2024 model in dark green color side profile"
+    },
+    "bluecruise-f150-handsfree.jpg": {
+        "make": "Ford",
+        "model": "F150",
+        "color": "Black Interior",
+        "description": "Ford F150 2024 with BlueCruise hands-free driving in action"
+    },
+    "bluecruise-f150.jpg": {
+        "make": "Ford",
+        "model": "F150",
+        "color": "Blue",
+        "description": "BlueCruise Feature"
+    },
+    "trackapp_mustang.jpg": {
+        "make": "Ford",
+        "model": "Mustang",
+        "color": "Blue",
+        "description": "Ford Mustang 2024 Track App Feature"
+    },
+    "mustang2024_modesimg.jpg": {
+        "make": "Ford",
+        "model": "Mustang",
+        "color": "Blue",
+        "description": "Ford Mustang 2024 Mode Selection Feature"
+    },
+    "goat_mode_bronco.jpg": {
+        "make": "Ford",
+        "model": "Bronco",
+        "color": "Grey",
+        "description": "Ford Bronco 2024 goat feature knob"
+    },
+    "goat_mode_steering.jpg": {
+        "make": "Ford",
+        "model": "Bronco",
+        "color": "Black",
+        "description": "Ford Bronco 2024 goat mode in action"
+    }
+}

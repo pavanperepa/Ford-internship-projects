@@ -1,0 +1,49 @@
+import os
+import faiss
+import torch
+from PIL import Image
+from transformers import CLIPProcessor, CLIPModel
+
+# Initialize CLIP model and processor
+model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
+processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
+
+def load_images(image_folder):
+    images = []
+    for filename in os.listdir(image_folder):
+        if filename.endswith((".jpg", ".jpeg", ".png")):
+            images.append(Image.open(os.path.join(image_folder, filename)))
+    return images
+
+def create_image_embeddings(images):
+    inputs = processor(images=images, return_tensors="pt", padding=True)
+    with torch.no_grad():
+        embeddings = model.get_image_features(**inputs)
+    return embeddings
+
+def save_embeddings_to_faiss(embeddings):
+    index = faiss.IndexFlatL2(embeddings.shape[1])
+    faiss.normalize_L2(embeddings.numpy())
+    index.add(embeddings.numpy())
+    return index
+
+def query_image(query_text, index):
+    inputs = processor(text=[query_text], return_tensors="pt", padding=True)
+    with torch.no_grad():
+        query_embedding = model.get_text_features(**inputs)
+    faiss.normalize_L2(query_embedding.numpy())
+    distances, indices = index.search(query_embedding.numpy(), k=5)  # Return top 5 matches
+    return indices[0]
+
+if __name__ == "__main__":
+    image_folder = "path/to/your/image/folder"
+    images = load_images(image_folder)
+    image_embeddings = create_image_embeddings(images)
+    index = save_embeddings_to_faiss(image_embeddings)
+
+    query = "a cat"
+    result_indices = query_image(query, index)
+    
+    print("Top matching images:")
+    for idx in result_indices:
+        images[idx].show()
